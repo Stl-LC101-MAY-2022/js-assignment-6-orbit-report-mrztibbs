@@ -1,3 +1,5 @@
+import { isNullOrUndefined, isUndefined } from "util";
+
 export class Satellite {
 
 	name: string;
@@ -15,9 +17,15 @@ export class Satellite {
    }
 	
 	isSpaceDebris(): boolean {
-		return true;
-   }
-
+		if (isNullOrUndefined(this)) { 
+		return false;
+		}
+		  if (this.type.includes('Space Debris')) {
+		  return true;
+		  } else { 
+		  return false;
+		  }
+	}
 }
 
 // TODO 3a: fix isSpaceDebris check
