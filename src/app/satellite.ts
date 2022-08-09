@@ -20,7 +20,7 @@ export class Satellite {
 		if (isNullOrUndefined(this)) { 
 		return false;
 		}
-		  if (this.type.includes('Space Debris')) {
+		  if (this.type === 'Space Debris') {
 		  return true;
 		  } else { 
 		  return false;
